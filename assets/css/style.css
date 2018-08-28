@@ -6,7 +6,7 @@ body {
 
 /* header */
 .header-atas{
-    height: 200px;
+    height: auto;
     background-color: white
 }
 /* vertical-centered text */
@@ -200,8 +200,10 @@ body {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
-
+/* Featured Article */
+.buton{
+    vertical-align: middle
+}
 /* Footer */
 .full {
     width: 75%;	
@@ -261,7 +263,7 @@ body {
 	float: left;
 	height: 30px;
 	clear: both;
-	width: 100%;
+	width: 75%;
 }
 .newsletter-box .btn {
 	border: medium none;
@@ -271,9 +273,9 @@ body {
 	-ms-border-radius: 3px;
 	border-radius: 3px;
 	display: inline-block;
-	height: 40px;
+	height: 25px;
 	padding: 0;
-	width: 100%;
+	width: 20%;
 	color: #fff;
 }
 .newsletter-box {
@@ -326,7 +328,9 @@ body {
 }
 
 
-
+.btn-xs{
+width: auto;
+}
 
 
 
