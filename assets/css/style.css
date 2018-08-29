@@ -327,8 +327,16 @@ body {
 	color: #EDEFF1 !important;
 }
 
+/* Comment */
 
-
+#comments, #comments li {
+    margin: 0;
+    padding: 0;
+}
+ 
+#comments li {
+    list-style: none;
+}
 
 
 
