@@ -52,3 +52,5 @@ $(document).ready(function(){
         $(".collapse").collapse('hide');
     });
 });
+
+$('.collapse').collapse()
