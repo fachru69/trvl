@@ -28,8 +28,8 @@
                     <ul class="navbar-nav ml-auto mr-auto">
                         <a class="nav-link" href="#">Home</a>
                         <a class="nav-link" href="page-2.html">Beautiful Indonesia</a>
-                        <a class="nav-link" href="">Indonesia Marvel</a>
-                        <a class="nav-link" href="">About Me</a>
+                        <a class="nav-link" href="marvel.html">Indonesia Marvel</a>
+                        <a class="nav-link" href="about.html">About Me</a>
                     </ul>
                 </div>
             </div>
