@@ -290,7 +290,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapeer">
+            <div class="wrapeer text-center">
             <button type="button" class="btn btn-info read-more" data-toggle="collapse" data-target="#demo">Read More</button>
             </div>
         </div>
