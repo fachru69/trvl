@@ -54,7 +54,7 @@
                             <img class="img-fluid mx-auto d-block" src="assets/img/280x200/01-280x200.jpg" alt="slide 1">
                             <div class="overlay">
                                 <h2>Bunaken</h2>
-                                <a class="info" href="#">Link Here</a>
+                                <a class="info" href="article-1.html">Link Here</a>
                             </div>
                         </div>
                     </div>
