@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                         <a class="nav-link" href="Home.php">Home</a>
-                        <a class="nav-link" href="beautiful.php">Beautiful Indonesia</a>
-                        <a class="nav-link" href="marvel.php">Indonesia Marvel</a>
-                        <a class="nav-link" href="about.php">About Me</a>
+                         <a class="nav-link" href="<?php echo base_url('index.php/Home')?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Marvel')?>">Indonesia Marvel</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/About')?>">About Me</a>
                     </ul>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <h1>About Me</h1>
             <p>A Glimpse Into My Life</p>
         </div>
-        <img src="assets/img/photographer-at-sunset-silhouette.jpg" alt="Image" style="max-width: 100%;">
+        <img src="<?php echo base_url('assets/img/photographer-at-sunset-silhouette.jpg')?>" alt="Image" style="max-width: 100%;">
         <p class="text-justify">
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
             <br>
@@ -54,7 +54,7 @@
            <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-01.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-01.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Lembah Baliem</h2>
                 <a class="info" href="#">Link Here</a>
@@ -63,7 +63,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-02.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-02.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Danau Sentani</h2>
                 <a class="info" href="#">Link Here</a>
@@ -72,7 +72,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-03.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-03.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Wae Rebo</h2>
                 <a class="info" href="# col-sm-6 col-sm-12 col-xs-12 text-center">Link Here</a>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-04.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-04.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Bokori Beach</h2>
                 <a class="info" href="#">Link Here</a>
@@ -90,7 +90,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-05.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-05.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>The Peak Of Jaya Wijaya</h2>
                 <a class="info" href="#">Link Here</a>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-06.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-06.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Raja Ampat</h2>
                 <a class="info" href="#">Link Here</a>
@@ -108,7 +108,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-07.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-07.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Balekambang Beach</h2>
                 <a class="info" href="#">Link Here</a>
@@ -117,7 +117,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
                <div class="hovereffect">
-                <img src="assets/img/250x150/-08.jpg" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/-08.jpg')?>" alt="Image" class="col-md-12">
                 <div class="overlay">
                 <h2>Mount Bromo</h2>
                 <a class="info" href="#">Link Here</a>

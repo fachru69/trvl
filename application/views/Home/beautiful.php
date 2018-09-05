@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                         <a class="nav-link" href="Home.php">Home</a>
-                        <a class="nav-link" href="beautiful.php">Beautiful Indonesia</a>
-                        <a class="nav-link" href="marvel.php">Indonesia Marvel</a>
-                        <a class="nav-link" href="about.php">About Me</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Home')?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Marvel')?>">Indonesia Marvel</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/About')?>">About Me</a>
                     </ul>
                 </div>
             </div>
@@ -45,42 +45,42 @@
         <div class="col-lg-12">
            <div class="row">
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-01.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-01.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Lembah Baliem</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-02.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-02.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Danau Sentani</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-03.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-03.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Wae Rebo</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-04.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-04.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Bokori Beach</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-05.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-05.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>The Peak Jaya Wijaya</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-06.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-06.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Raja Ampat</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-07.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-07.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Balekambang Beach</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-08.jpg" alt="Image" style="max-width:100%;"></a>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-08.jpg')?>" alt="Image" style="max-width:100%;"></a>
                 <h6>Mount Bromo</h6><br>
                 <p>Type your Post</p>
             </div>
