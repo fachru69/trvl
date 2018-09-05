@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travel</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/js/style.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
+    <script src="<?php echo base_url('assets/js/style.js')?>"></script>
 </head>
 
 <body>
@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="#">Beautiful Indonesia</a>
-                        <a class="nav-link" href="">Indonesia Marvel</a>
-                        <a class="nav-link" href="about.html">About Me</a>
+                        <a class="nav-link" href="Home.php">Home</a>
+                        <a class="nav-link" href="beautiful.php">Beautiful Indonesia</a>
+                        <a class="nav-link" href="marvel.php">Indonesia Marvel</a>
+                        <a class="nav-link" href="about.php">About Me</a>
                     </ul>
                 </div>
             </div>
@@ -39,49 +39,49 @@
     <!-- Badan-->
     <div class="container">
         <div class="text-center">
-            <h1>Beautiful Indonesia</h1>
-            <p>Explore Indonesia</p>
+            <h1>Indonesia Marvels</h1>
+            <p>Explore</p>
         </div>
         <div class="col-lg-12">
            <div class="row">
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-01.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Lembah Baliem</h6><br>
+                <a href="#"><img src="assets/img/marvel/Fiordland%20National%20Park,%20New%20Zealand.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Fiordland National Park</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-02.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Danau Sentani</h6><br>
+                <a href="#"><img src="assets/img/marvel/gibbon-experience-in-Huay-Xai-Laos.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Huay Xai - Laos</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-03.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Wae Rebo</h6><br>
+                <a href="#"><img src="assets/img/marvel/Halong-Bay.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Halong Bay - Vietnam</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-04.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Bokori Beach</h6><br>
+                <a href="#"><img src="assets/img/marvel/Salar%20de%20Uyuni%20-%20Bolivia.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Salar de Uyuni - Bolivia</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-05.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>The Peak Jaya Wijaya</h6><br>
+                <a href="#"><img src="assets/img/marvel/maashey%20lake%20%20-%20russian.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Maashey Lake - Russia</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-06.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Raja Ampat</h6><br>
+                <a href="#"><img src="assets/img/marvel/Mongolia.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Mongolian Camp</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-07.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Balekambang Beach</h6><br>
+                <a href="#"><img src="assets/img/marvel/tigers-nest-bhutan1-1600x900.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Tigers Nest - Bhutan</h6><br>
                 <p>Type your Post</p>
             </div>
             <div class="col-md-3">
-                <a href="#"><img src="assets/img/250x150/-08.jpg" alt="Image" style="max-width:100%;"></a>
-                <h6>Mount Bromo</h6><br>
+                <a href="#"><img src="assets/img/marvel/torres-del-paine-national-park-patagonia.adapt.885.1.jpg" alt="Image" class="img-thumbnail"></a>
+                <h6>Torres del Paine - Patagonia</h6><br>
                 <p>Type your Post</p>
             </div>
             </div>

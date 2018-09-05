@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travel</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/js/style.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
+    <script src="<?php echo base_url('assets/js/style.js')?>"></script>
 </head>
 
 <body>
@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="page-2.html">Beautiful Indonesia</a>
-                        <a class="nav-link" href="">Indonesia Marvel</a>
-                        <a class="nav-link" href="">About Me</a>
+                         <a class="nav-link" href="Home.php">Home</a>
+                        <a class="nav-link" href="beautiful.php">Beautiful Indonesia</a>
+                        <a class="nav-link" href="marvel.php">Indonesia Marvel</a>
+                        <a class="nav-link" href="about.php">About Me</a>
                     </ul>
                 </div>
             </div>

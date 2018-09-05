@@ -26,10 +26,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                        <a class="nav-link" href="#">Home</a>
-                        <a class="nav-link" href="page-2.html">Beautiful Indonesia</a>
-                        <a class="nav-link" href="marvel.html">Indonesia Marvel</a>
-                        <a class="nav-link" href="about.html">About Me</a>
+                         <a class="nav-link" href="Home.php">Home</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
+                        <a class="nav-link" href="marvel.php">Indonesia Marvel</a>
+                        <a class="nav-link" href="about.php">About Me</a>
                     </ul>
                 </div>
             </div>
