@@ -20,6 +20,11 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('Home/Home');
+        $this->load->view('Home/Home');
+        
 	}
+    public function detail_article()
+    {
+        $data = array
+    }
 }
