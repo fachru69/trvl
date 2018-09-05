@@ -54,7 +54,7 @@
                             <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/01-280x200.jpg')?>" alt="slide 1">
                             <div class="overlay">
                                 <h2>Bunaken</h2>
-                                <a class="info" href="<?php echo base_url('rinjani')?>">Link Here</a>
+                                <a class="info" href="<?php echo base_url().'index.php/Home/detail_article/1'?>">Link Here</a>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,7 @@
+<?php 
+print_r($artikel[$this->uri->segment(3)]);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,7 +46,7 @@
             <div class="col-xs-12 col-md-8 border-right">
                 <div class="col-md-12 border-bottom">
                     <div class="">
-                        <h1 class="text-center">Mount Rinjani</h1>
+                        <h1 class="text-center"><?php echo artikel($judul) ?></h1>
                         <img src="assets/img/750x350/01-750x350.jpg')?>" alt="Image" style="max-width: 100%;">
                         <br>
                         <div class="">
