@@ -1,7 +1,5 @@
 <?php 
-print_r($artikel[$this->uri->segment(3)]);
-
-?>
+print_r($artikel[$this->uri->segment(3)]);?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,14 +44,12 @@ print_r($artikel[$this->uri->segment(3)]);
             <div class="col-xs-12 col-md-8 border-right">
                 <div class="col-md-12 border-bottom">
                     <div class="">
-                        <h1 class="text-center"><?php echo artikel($judul) ?></h1>
-                        <img src="assets/img/750x350/01-750x350.jpg')?>" alt="Image" style="max-width: 100%;">
+                        <h1 class="text-center"><?php echo $1->$judul; ?></h1>
+                        <img src="<?php echo base_url('assets/img/750x350/01-750x350.jpg')?>" alt="Image" style="max-width: 100%;">
                         <br>
                         <div class="">
                             <p class="text-justify">
-                                Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat. Gunung yang merupakan gunung berapi kedua tertinggi di Indonesia dengan ketinggian 3.726 m dpl serta terletak pada lintang 8º25' LS dan 116º28' BT ini merupakan gunung favorit bagi pendaki Indonesia karena keindahan pemandangannya. Gunung ini merupakan bagian dari Taman Nasional Gunung Rinjani yang memiliki luas sekitar 41.330 ha dan ini akan diusulkan penambahannya sehingga menjadi 76.000 ha ke arah barat dan timur.
-                                <br>
-                                Secara administratif gunung ini berada dalam wilayah tiga kabupaten: Lombok Timur, Lombok Tengah dan Lombok Barat.
+                                <?php echo $post; ?>
                             </p>
                         </div>
                     </div>
@@ -110,7 +106,7 @@ print_r($artikel[$this->uri->segment(3)]);
                 </div>
             </div>
             <div class="col-xs-6 col-md-4">
-                <h4 class="text-center">Popular Pieces</h4>
+                <h4 class="text-center"><?php echo $head; ?></h4>
                 <p class="text-center">Your Favorite Destination Places</p>
                 <div class="col-sm-12 border-bottom">
                     <img src="<?php echo base_url('assets/img/280x200/01-280x200.jpg')?>" alt="Image" class="col-md-12">
