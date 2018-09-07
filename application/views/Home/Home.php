@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
     <script src="<?php echo base_url('assets/js/style.js')?>"></script>
 </head>
@@ -30,6 +30,7 @@
                         <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
                         <a class="nav-link" href="<?php echo base_url('index.php/Marvel')?>">Indonesia Marvel</a>
                         <a class="nav-link" href="<?php echo base_url('index.php/About')?>">About Me</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Admin')?>">Admin</a>
                     </ul>
                 </div>
             </div>
