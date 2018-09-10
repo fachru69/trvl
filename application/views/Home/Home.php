@@ -155,14 +155,14 @@ print_r ($artikel) ? -->
     <!--- Article Section -->
     <div class="container">
         <div class="row border-bottom">
-            <div class="col-xs-12 col-md-8 border-right">
+            <div class="col-xs-12 col-lg-8 border-right">
                <?php foreach($artikel as $art){
     
  ?>
-                <div class="col-md-12 border-bottom">
+                <div class="col-lg-12 border-bottom">
                     <div class="bottom-border">
                         <img src="<?php echo base_url('assets/img/750x350/'.$art['img_artikel_name'])?>" alt="Image" class="img-artikel-home col-md-12" style="width: 750px; height: 350px;">
-                        <h3><?=$art['judul_artikel']?></h3>
+                        <a href="<?php echo base_url('index.php/Home/page_art/'.$art['id_artikel'])?>"><h3><?=$art['judul_artikel']?></h3></a>
                         <p class="text-justify">
                         <?=$art['konten_artikel']?>
                         </p>
@@ -173,7 +173,12 @@ print_r ($artikel) ? -->
                 
 <?php } ?>                
             </div>
-            <div class="col-xs-6 col-md-4">
+            
+            
+            
+            
+            
+            <div class="col-xs-6 col-lg-4">
                 <h4 class="text-center">Popular Pieces</h4>
                 <p class="text-center">Your Favorite Destination Places</p>
                 <div class="col-sm-12 border-bottom">

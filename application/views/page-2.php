@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Travel</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="assets/js/style.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
+    <script src="<?php echo base_url('assets/js/style.js')?>"></script>
 </head>
 
 <body>
@@ -26,10 +26,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="page-2.html">Beautiful Indonesia</a>
-                        <a class="nav-link" href="">Indonesia Marvel</a>
-                        <a class="nav-link" href="about.html">About Me</a>
+                         <a class="nav-link" href="<?php echo base_url('index.php/Home')?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Marvel')?>">Indonesia Marvel</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/About')?>">About Me</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Admin')?>">Admin</a>
                     </ul>
                 </div>
             </div>
@@ -42,67 +43,71 @@
             <div class="col-xs-12 col-md-8 border-right">
                 <div class="col-md-12 border-bottom">
                     <div class="">
-                        <h1 class="text-center">Mount Rinjani</h1>
-                        <img src="assets/img/750x350/01-750x350.jpg" alt="Image" style="max-width: 100%;">
+                        <h1 class="text-center">Lembah Baliem</h1>
+                        <img src="assets/img/pic/Lembah-Baliem.jpg" alt="Image" style="max-width: 100%;">
                         <br>
                         <div class="">
                             <p class="text-justify">
-                                Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat. Gunung yang merupakan gunung berapi kedua tertinggi di Indonesia dengan ketinggian 3.726 m dpl serta terletak pada lintang 8º25' LS dan 116º28' BT ini merupakan gunung favorit bagi pendaki Indonesia karena keindahan pemandangannya. Gunung ini merupakan bagian dari Taman Nasional Gunung Rinjani yang memiliki luas sekitar 41.330 ha dan ini akan diusulkan penambahannya sehingga menjadi 76.000 ha ke arah barat dan timur.
+                                Lembah Baliem merupakan lembah di pegunungan Jayawijaya. Lembah Baliem berada di ketinggian 1600 meter dari permukaan laut yang dikelilingi pegunungan dengan pemandangannya yang indah dan masih alami. Suhu bisa mencapai 10-15 derajat celcius pada waktu malam.
                                 <br>
-                                Secara administratif gunung ini berada dalam wilayah tiga kabupaten: Lombok Timur, Lombok Tengah dan Lombok Barat.
+                                Lembah ini dikenal juga sebagai grand baliem valley merupakan tempat tinggal suku Dani yang terletak di Desa Wosilimo, 27 km dari Wamena, Papua. Selain Suku Dani beberapa suku lainnya hidup bertetangga di lembah ini yakni Suku Yali dan suku Lani.
+                                <br>
+                                Lembah adalah sekitar 80 km panjang sebesar 20 km dengan lebar dan terletak di ketinggian sekitar 1,600-1,700 m, dengan populasi sekitar 100.000 jiwa.
+                                <br>
+                                Penemuan Lembah Baliem dan kehadiran tak terduga dari populasi yang besar pertaniannya ditemukan oleh ekspedisi ketiga zoologi Richard Archbold untuk New Guinea pada tahun 1938. Pada tanggal 21 Juni sebuah selatan penerbangan udara Reconnaissance dari Hollandia (sekarang Jayapura) menemukan apa ekspedisi disebut 'Grand Valley'. Secara bertahap kemudian lembah sejak itu telah dibuka terbatas untuk pariwisata yaitu dengan adanya Festival Lembah Baliem.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="well">
- 
-    <h4>Leave a comment</h4>
- 
-    <form role="form" class="clearfix">
- 
-        <div class="col-md-6 form-group">
-            <label class="sr-only" for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name">
-        </div>
- 
-        <div class="col-md-6 form-group">
-            <label class="sr-only" for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
- 
-        <div class="col-md-12 form-group">
-            <label class="sr-only" for="email">Comment</label>
-            <textarea class="form-control" id="comment" placeholder="Comment"></textarea>
-        </div>
- 
-        <div class="col-md-12 form-group text-right">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
- 
-    </form>
-    <ul id="comments" class="comments">
-    <li class="comment">
-        <div class="clearfix">
-            <h4 class="pull-left">John</h4>
-            <p class="pull-right">9:41 PM on August 24, 2013</p>
-        </div>
-        <p>
-            <em>I don't believe in astrology but still your writing style is really great!</em>
-        </p>
-    </li>
- 
-    <li class="comment clearfix">
-        <div class="clearfix">
-            <h4 class="pull-left">John</h4>
-            <p class="pull-right">9:41 PM on August 24, 2013</p>
-        </div>
-        <p>
-            <em>I don't believe in astrology but still your writing style is really great!</em>
-        </p>
-    </li>
-</ul>
-</div>
+
+                        <h4>Leave a comment</h4>
+
+                        <form role="form" class="clearfix">
+
+                            <div class="col-md-6 form-group">
+                                <label class="sr-only" for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <label class="sr-only" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+
+                            <div class="col-md-12 form-group">
+                                <label class="sr-only" for="email">Comment</label>
+                                <textarea class="form-control" id="comment" placeholder="Comment"></textarea>
+                            </div>
+
+                            <div class="col-md-12 form-group text-right">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </form>
+                        <ul id="comments" class="comments">
+                            <li class="comment">
+                                <div class="clearfix">
+                                    <h4 class="pull-left">John</h4>
+                                    <p class="pull-right">9:41 PM on August 24, 2013</p>
+                                </div>
+                                <p>
+                                    <em>I don't believe in astrology but still your writing style is really great!</em>
+                                </p>
+                            </li>
+
+                            <li class="comment clearfix">
+                                <div class="clearfix">
+                                    <h4 class="pull-left">John</h4>
+                                    <p class="pull-right">9:41 PM on August 24, 2013</p>
+                                </div>
+                                <p>
+                                    <em>I don't believe in astrology but still your writing style is really great!</em>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-xs-6 col-md-4">
@@ -118,7 +123,7 @@
                 </div>
                 <div class="col-sm-12">
                     <img src="assets/img/280x200/02-280x200.jpg" alt="Image" class="col-md-12">
-                    <h5>Bunaken, Sulawesi Utara</h5>
+                    <h5>Gili Trawangan, Lombok</h5>
                     <p class="text-justify">Bunaken merupakan salah satu destinasi wista paling favorite bagi turis international, karena adanya wisata Snorkling</p>
                     <a href="#">
                         <i class="fa fa-comment" style="font-size: 16px"></i> 125 Comments

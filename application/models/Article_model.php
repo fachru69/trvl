@@ -15,11 +15,11 @@ class Article_model extends CI_Model
         $this -> db -> select('*');
         $this -> db -> from('artikel');
         $this -> db -> join('img_artikel', 'artikel.id_artikel = img_artikel.id_artikel', 'left');
-		      //if($id!==null){
-		      //	$this -> db -> where('id_artikel',$id);
-		      //}
+		      if(isset($id['id_artikel'])){
+		      	$this -> db -> where('artikel.id_artikel',$id['id_artikel']);
+		      }
 		      $this -> db -> order_by('artikel.id_artikel','DESC');
-                if($id['limit']!==null){
+                if(isset($id['limit'])){
                     $this -> db -> limit($id['limit']);
                     }
 		      $query = $this -> db -> get();
