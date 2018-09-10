@@ -61,6 +61,8 @@ class Article_model extends CI_Model
             return false;
         }
     }
+    
+    
 	function add_article(){
 	
 	}
