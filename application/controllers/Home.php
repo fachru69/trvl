@@ -19,12 +19,25 @@ class Home extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
     
-     
-    
+    function __construct()
+        {
+                parent::__construct();
+        $this->load->model(array('Article_model'));
+        /**$this->load->model(array('artikel','menu'));*/
+        }
 	public function index()
 	{
+        $id=array(
+        'limit'=>3
+        );
+        $data ['artikel'] = $this->Article_model->get_article($id);
         
-        $this->load->view('Home/Home');
+        $id2=array(
+        'limit'=>6
+            );
+        $data ['destinasi'] = $this->Article_model->get_destinasi($id2);
+            
+        $this->load->view('Home/Home', $data);
         
 	}
 }

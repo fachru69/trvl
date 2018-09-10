@@ -458,7 +458,15 @@ figure {
     top: 50%;
 }
 
-
+.img-artikel-home{
+  display: table;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)

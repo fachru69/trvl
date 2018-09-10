@@ -1,3 +1,5 @@
+<!--?php 
+print_r ($artikel) ? -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="<?php echo base_url()?>/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
     <script src="<?php echo base_url('assets/js/style.js')?>"></script>
 </head>
@@ -154,33 +156,22 @@
     <div class="container">
         <div class="row border-bottom">
             <div class="col-xs-12 col-md-8 border-right">
-                <div class="col-md-12">
+               <?php foreach($artikel as $art){
+    
+ ?>
+                <div class="col-md-12 border-bottom">
                     <div class="bottom-border">
-                        <img src="<?php echo base_url('assets/img/750x350/01-750x350.jpg')?>" alt="Image" style="max-width: 100%;">
-                        <h3>Mount Rinjani</h3>
+                        <img src="<?php echo base_url('assets/img/750x350/'.$art['img_artikel_name'])?>" alt="Image" class="img-artikel-home col-md-12" style="width: 750px; height: 350px;">
+                        <h3><?=$art['judul_artikel']?></h3>
                         <p class="text-justify">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        <?=$art['konten_artikel']?>
                         </p>
+                        <br>
+                        <?=$art['tgl_artikel']?>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="bottom-border">
-                        <img src="<?php echo base_url('assets/img/750x350/02-750x350.jpg')?>" alt="Image" style="max-width: 100%;">
-                        <h3>Gili trawangan</h3>
-                        <p class="text-justify">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="bottom-border">
-                        <img src="<?php echo base_url('assets/img/750x350/Prambanan-Temple-Yogyakarta.jpg')?>" alt="Image" style="max-width: 100%;">
-                        <h3>Prambanan Temple</h3>
-                        <p class="text-justify">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                    </div>
-                </div>
+                
+<?php } ?>                
             </div>
             <div class="col-xs-6 col-md-4">
                 <h4 class="text-center">Popular Pieces</h4>
@@ -225,47 +216,17 @@
         <!-- Carousel items -->
         <h1 class="text-center">Destinasi</h1>
         <div class="row col-md-12" role="listbox">
+           <?php foreach($destinasi as $dest){
+    
+ ?>
             <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-01.jpg')?>" alt="Image1" style="max-width:100%;"></a>
-                <h6>Lembah Baliem</h6><br>
-                <p>Destinasi Wisata Alam di Pulau Papua</p>
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/'.$dest['img_dest_name'])?>" alt="Image1" style="max-width:100%;"></a>
+                <h6><?=$dest['judul_destinasi']?></h6><br>
+                <p><?=$dest['isi_destinasi']?></p>
             </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-02.jpg')?>" alt="Image2" style="max-width:100%;"></a>
-                <h6>Danau Sentani</h6><br>
-                <p>Destinasi Wisata Alam di Pulau Papua</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-03.jpg')?>" alt="Image3" style="max-width:100%;"></a>
-                <h6>Wae Rebo</h6><br>
-                <p>Destinasi Wisata Budaya di Pulau Nusa Tenggara</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-04.jpg')?>" alt="Image4" style="max-width:100%;"></a>
-                <h6>Pantai Bokori</h6><br>
-                <p>Destinasi Wisata Laut di Pulau Sulawesi</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-05.jpg')?>" alt="Image5" style="max-width:100%;"></a>
-                <h6>Puncak Jaya Wijaya</h6><br>
-                <p>Destinasi Wista Pendakian di Pulau Papua</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-06.jpg')?>" alt="Image6" style="max-width:100%;"></a>
-                <h6>Raja Ampat</h6><br>
-                <p>Destinasi Wisata Laut di Pulau Papua</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-07.jpg')?>" alt="Image7" style="max-width:100%;"></a>
-                <h6>Balekambang Beach</h6><br>
-                <p>Destinasi Wisata Pantai di Pulau Jawa</p>
-            </div>
-            <div class="col-md-6 col-sm-12 col-lg-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-08.jpg')?>" alt="Image8" style="max-width:100%;"></a>
-                <h6>Gunung Bromo</h6><br>
-                <p>Destinasi Wisata Pendakian di Pulau Jawa</p>
-            </div>
+            <?php }?>
         </div>
+        
         <div class="container">
             <div id="demo" class="collapse">
                 <div class="row col-md-12" role="listbox">
