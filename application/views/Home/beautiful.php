@@ -42,48 +42,19 @@
             <h1>Beautiful Indonesia</h1>
             <p>Explore Indonesia</p>
         </div>
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-3">
            <div class="row">
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-01.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Lembah Baliem</h6><br>
-                <p>Type your Post</p>
+           <div class="row col-md-12" role="listbox">
+           <?php foreach($destinasi as $dest){
+    
+ ?>
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <a href="#"><img src="<?php echo base_url('assets/img/250x150/'.$dest['img_dest_name'])?>" alt="Image1" style="max-width:100%;"></a>
+                <h6><?=$dest['judul_destinasi']?></h6><br>
+                <p><?=$dest['isi_destinasi']?></p>
             </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-02.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Danau Sentani</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-03.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Wae Rebo</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-04.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Bokori Beach</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-05.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>The Peak Jaya Wijaya</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-06.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Raja Ampat</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-07.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Balekambang Beach</h6><br>
-                <p>Type your Post</p>
-            </div>
-            <div class="col-md-3">
-                <a href="#"><img src="<?php echo base_url('assets/img/250x150/-08.jpg')?>" alt="Image" style="max-width:100%;"></a>
-                <h6>Mount Bromo</h6><br>
-                <p>Type your Post</p>
-            </div>
+            <?php }?>
+        </div>
             </div>
         </div>
     </div>

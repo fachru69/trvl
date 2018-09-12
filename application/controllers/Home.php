@@ -52,7 +52,11 @@ class Home extends CI_Controller {
         'limit'=>8
             );
         $data ['destinasi'] = $this->Article_model->get_destinasi($id2);
-        //artikel page
+        //feat artikel
+        $id3=array(
+        'limit'=>4
+            );
+        $data ['feat_artikel'] = $this->Article_model->get_feat($id3);
         $this->load->view('Home/Home', $data);
         
         

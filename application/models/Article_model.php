@@ -35,6 +35,35 @@ class Article_model extends CI_Model
             return false;
         }
     }
+    
+     //feat artikel
+	public function get_feat($id3)
+    {
+        $this -> db -> select('*');
+        $this -> db -> from('feat_artikel');
+        $this -> db -> join('img_feat', 'feat_artikel.id_feat = img_feat.id_feat', 'left');
+		      //if($id!==null){
+		      //	$this -> db -> where('id_artikel',$id);
+		      //}
+		      $this -> db -> order_by('feat_artikel.id_feat','DESC');
+                if($id3['limit']!==null){
+                    $this -> db -> limit($id3['limit']);
+                    }
+		      $query = $this -> db -> get();
+        
+                // echo $this -> db -> get();
+        if ($query->num_rows () > 0)
+        {
+            $result = $query->result_array();
+            return $result;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    
     //destinasi
 	public function get_destinasi($id2)
     {

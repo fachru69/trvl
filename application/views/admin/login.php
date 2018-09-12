@@ -9,22 +9,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/bootstrap.min.css')?>">
+		<link rel="stylesheet" href="<?php echo base_url('/assets/assets/font-awesome/4.5.0/css/font-awesome.min.css')?>">
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/fonts.googleapis.com.css')?>">
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/ace.min.css')?>">
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" />
+		<!--[if lte IE 9]-->
+			<link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/ace-part2.min.css')?>">
 		<![endif]-->
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/ace-rtl.min.css')?>">
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="<?php echo base_url('/assets/assets/css/ace-ie.min.css')?>">
 		<![endif]-->
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
@@ -44,10 +44,9 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">Ace</span>
-									<span class="white" id="id-text2">Application</span>
+									<span class="white" id="id-text2">Administrator</span>
 								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+								<h4 class="blue" id="id-company-text">&copy; Travel Bucket List</h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -96,7 +95,7 @@
 													<div class="space-4"></div>
 												</fieldset>
 											</form>
-
+<!--
 											<div class="social-or-login center">
 												<span class="bigger-110">Or Login Using</span>
 											</div>
@@ -117,7 +116,7 @@
 												</a>
 											</div>
 										</div><!-- /.widget-main -->
-
+<!--
 										<div class="toolbar clearfix">
 											<div>
 												<a href="#" data-target="#forgot-box" class="forgot-password-link">
@@ -135,7 +134,7 @@
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->
-
+<!--
 								<div id="forgot-box" class="forgot-box widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
@@ -167,7 +166,7 @@
 												</fieldset>
 											</form>
 										</div><!-- /.widget-main -->
-
+<!--
 										<div class="toolbar center">
 											<a href="#" data-target="#login-box" class="back-to-login-link">
 												Back to login
@@ -176,7 +175,7 @@
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.forgot-box -->
-
+<!--
 								<div id="signup-box" class="signup-box widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">

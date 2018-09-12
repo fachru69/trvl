@@ -52,77 +52,18 @@
     </div>
     <div class="col-lg-12">
            <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
+            <div class="row col-md-12 text-center" role="listbox">
+              <?php foreach ($destinasi as $dest) {?>
+              <div class="col-md-6 col-sm-12 col-lg-3">
                <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-01.jpg')?>" alt="Image" class="col-md-12">
+                <img src="<?php echo base_url('assets/img/250x150/'.$dest['img_dest_name'])?>" alt="Image" class="col-md-12">
                 <div class="overlay">
-                <h2>Lembah Baliem</h2>
+                <h2><?=$dest['judul_destinasi']?></h2>
                 <a class="info" href="#">Link Here</a>
                 </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-02.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Danau Sentani</h2>
-                <a class="info" href="#">Link Here</a>
                 </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-03.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Wae Rebo</h2>
-                <a class="info" href="# col-sm-6 col-sm-12 col-xs-12 text-center">Link Here</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-04.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Bokori Beach</h2>
-                <a class="info" href="#">Link Here</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-05.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>The Peak Of Jaya Wijaya</h2>
-                <a class="info" href="#">Link Here</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-06.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Raja Ampat</h2>
-                <a class="info" href="#">Link Here</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-07.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Balekambang Beach</h2>
-                <a class="info" href="#">Link Here</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-12 col-xs-12 text-center">
-               <div class="hovereffect">
-                <img src="<?php echo base_url('assets/img/250x150/-08.jpg')?>" alt="Image" class="col-md-12">
-                <div class="overlay">
-                <h2>Mount Bromo</h2>
-                <a class="info" href="#">Link Here</a>
-                </div>
-                </div>
+                <?php }?>
             </div>
             </div>
         </div>

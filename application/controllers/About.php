@@ -18,8 +18,18 @@ class About extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+     function __construct()
+        {
+                parent::__construct();
+        $this->load->model(array('Article_model'));
+        /**$this->load->model(array('artikel','menu'));*/
+        }
 	public function index()
 	{
-		$this->load->view('Home/about');
+        $id2=array(
+        'limit'=>8
+            );
+        $data ['destinasi'] = $this->Article_model->get_destinasi($id2);
+		$this->load->view('Home/about', $data);
 	}
 }
