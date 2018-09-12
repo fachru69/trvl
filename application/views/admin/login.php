@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -60,20 +61,19 @@
 												Please Enter Your Information
 											</h4>
 
-											<div class="space-6"></div>
 
-											<form>
+											<form action="<?php echo base_url('index.php/Admin'); ?>" method="post">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" class="form-control" name="username" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" class="form-control"  name="password" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -86,7 +86,7 @@
 															<span class="lbl"> Remember Me</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="button submit" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
 															<span class="bigger-110">Login</span>
 														</button>

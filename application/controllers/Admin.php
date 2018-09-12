@@ -3,23 +3,75 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('/admin/login');
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        //load model admin
+        $this->load->model('login');
+    }
+
+    public function index()
+    {
+
+            if($this->login->logged_id())
+            {
+                //jika memang session sudah terdaftar, maka redirect ke halaman dahsboard
+                redirect("dashboard");
+
+            }else{
+
+                //jika session belum terdaftar
+
+                //set form validation
+                $this->form_validation->set_rules('username', 'Username', 'required');
+                $this->form_validation->set_rules('password', 'Password', 'required');
+
+                //set message form validation
+                $this->form_validation->set_message('required', '<div class="alert alert-danger" style="margin-top: 3px">
+                    <div class="header"><b><i class="fa fa-exclamation-circle"></i> {field}</b> harus diisi</div></div>');
+
+                //cek validasi
+                if ($this->form_validation->run() == TRUE) {
+
+                //get data dari FORM
+                $username = $this->input->post("username", TRUE);
+                $password = MD5($this->input->post('password', TRUE));
+
+                //checking data via model
+                $checking = $this->login->check_login('user', array('username' => $username), array('password' => $password));
+
+                //jika ditemukan, maka create session
+                if ($checking != FALSE) {
+                    foreach ($checking as $apps) {
+
+                        $session_data = array(
+                            'user_id'   => $apps->id_user,
+                            'user_name' => $apps->username,
+                            'user_pass' => $apps->password,
+                        );
+                        //set session userdata
+                        $this->session->set_userdata($session_data);
+
+                        redirect('dashboard/');
+
+                    }
+                }else{
+
+                    $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
+                        <div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> username atau password salah!</div></div>';
+                    $this->load->view('admin/index', $data);
+                }
+
+            }else{
+
+                $this->load->view('admin/index');
+            }
+
+        }
+
+    }
+    function logout(){     
+  $this->session->sess_destroy();
+  redirect('index.php/Admin');
+    }
 }
