@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class Person extends CI_Controller {
+class C_CRUD extends CI_Controller {
  
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('person_model');
+        $this->load->model('M_CRUD');
     }
  
     public function index()
@@ -17,7 +17,7 @@ class Person extends CI_Controller {
  
     public function ajax_list()
     {
-        $list = $this->person_model->get_datatables();
+        $list = $this->M_CRUD->get_datatables();
         $data = array();
         $no = $_POST['start'];
         foreach ($list as $person) {
@@ -30,16 +30,16 @@ class Person extends CI_Controller {
             $row[] = $person->tgl_artikel;
  
             //add html for action
-            $row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_person('."'".$person->id_artikel."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
-                  <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_person('."'".$person->id_artikel."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
+            $row[] = '<a class="btn btn-sm btn-primary" href="javascript:void(0)" title="Edit" onclick="edit_artikel('."'".$person->id_artikel."'".')"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+                  <a class="btn btn-sm btn-danger" href="javascript:void(0)" title="Hapus" onclick="delete_artikel('."'".$person->id_artikel."'".')"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
          
             $data[] = $row;
         }
  
         $output = array(
                         "draw" => $_POST['draw'],
-                        "recordsTotal" => $this->person_model->count_all(),
-                        "recordsFiltered" => $this->person_model->count_filtered(),
+                        "recordsTotal" => $this->M_CRUD->count_all(),
+                        "recordsFiltered" => $this->M_CRUD->count_filtered(),
                         "data" => $data,
                 );
         //output to json format
@@ -48,7 +48,7 @@ class Person extends CI_Controller {
  
     public function ajax_edit($id)
     {
-        $data = $this->person_model->get_by_id($id);
+        $data = $this->M_CRUD->get_by_id($id);
         $data->tgl_artikel = ($data->tgl_artikel == '0000-00-00') ? '' : $data->tgl_artikel; // if 0000-00-00 set tu empty for datepicker compatibility
         echo json_encode($data);
     }
@@ -63,7 +63,7 @@ class Person extends CI_Controller {
                 'full_artikel' => $this->input->post('full_artikel'),
                 'tgl_artikel' => $this->input->post('tgl_artikel'),
             );
-        $insert = $this->person_model->save($data);
+        $insert = $this->M_CRUD->save($data);
         echo json_encode(array("status" => TRUE));
     }
  
@@ -77,13 +77,13 @@ class Person extends CI_Controller {
                 'full_artikel' => $this->input->post('full_artikel'),
                 'tgl_artikel' => $this->input->post('tgl_artikel'),
             );
-        $this->person_model->update(array('id_artikel' => $this->input->post('id_artikel')), $data);
+        $this->M_CRUD->update(array('id_artikel' => $this->input->post('id_artikel')), $data);
         echo json_encode(array("status" => TRUE));
     }
  
     public function ajax_delete($id)
     {
-        $this->person_model->delete_by_id($id);
+        $this->M_CRUD->delete_by_id($id);
         echo json_encode(array("status" => TRUE));
     }
  
@@ -136,5 +136,4 @@ class Person extends CI_Controller {
             exit();
         }
     }
- 
 }

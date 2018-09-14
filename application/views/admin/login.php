@@ -19,10 +19,11 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url()?>assets/admin/css/sb-admin.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
+    <script src="<?php echo base_url('assets/js/style.js')?>"></script>
   </head>
 
-  <body class="bg-dark">
+  <body class="home">
 
     <div class="container">
       <div class="card card-login mx-auto mt-5">

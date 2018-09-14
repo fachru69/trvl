@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Tables</title>
+    <title>Admin - Artikel</title>
 
     <!-- Bootstrap core CSS-->
     <link href="<?php echo base_url()?>assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 
       <!-- Navbar -->
       <ul class="navbar-nav ml-auto ml-md-0">
-        <li class="nav-item dropdown no-arrow mx-1">
+        <!--<li class="nav-item dropdown no-arrow mx-1">
           <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-bell fa-fw"></i>
             <span class="badge badge-danger">9+</span>
@@ -73,7 +73,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
+        </li>-->
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle fa-fw"></i>
@@ -116,14 +116,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/chart">
+          <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/charts">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Charts</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/tables">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
+            <span>Artikel</span></a>
         </li>
       </ul>
 
@@ -142,19 +142,12 @@
             </li>
             <li class="breadcrumb-item active">Tables</li>
           </ol>
-
-          <p class="small text-center text-muted my-5">
-            <em>More table examples coming soon...</em>
-          </p>
-
         </div>
         <!-- /.container-fluid -->
 <div class="container">
-        <h1 style="font-size:20pt">Ajax CRUD with Bootstrap modals and Datatables with Server side Validation</h1>
- 
-        <h3>Person Data</h3>
+        <h3>Artikel Data</h3>
         <br />
-        <button class="btn btn-success" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
+        <button class="btn btn-success" onclick="add_artikel()"><i class="glyphicon glyphicon-plus"></i> Add Artikel</button>
         <button class="btn btn-default" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
         <br />
         <br />
@@ -171,17 +164,6 @@
             </thead>
             <tbody>
             </tbody>
- 
-            <tfoot>
-            <tr>
-                <th>Judul Artikel</th>
-                    <th>Konten Artikel</th>
-                    <!--<th>Gender</th>-->
-                    <th>Full Artikel</th>
-                    <th>Tanggal</th>
-                <th>Action</th>
-            </tr>
-            </tfoot>
         </table>
     </div>
  
@@ -209,7 +191,7 @@ $(document).ready(function() {
  
         // Load data for the table's content from an Ajax source
         "ajax": {
-            "url": "<?php echo base_url('index.php/Person/ajax_list')?>",
+            "url": "<?php echo base_url('index.php/C_CRUD/ajax_list')?>",
             "type": "POST"
         },
  
@@ -251,17 +233,17 @@ $(document).ready(function() {
  
  
  
-function add_person()
+function add_artikel()
 {
     save_method = 'add';
     $('#form')[0].reset(); // reset form on modals
     $('.form-group').removeClass('has-error'); // clear error class
     $('.help-block').empty(); // clear error string
     $('#modal_form').modal('show'); // show bootstrap modal
-    $('.modal-title').text('Add Person'); // Set Title to Bootstrap modal title
+    $('.modal-title').text('Add Artikel'); // Set Title to Bootstrap modal title
 }
  
-function edit_person(id)
+function edit_artikel(id)
 {
     save_method = 'update';
     $('#form')[0].reset(); // reset form on modals
@@ -270,7 +252,7 @@ function edit_person(id)
  
     //Ajax Load data from ajax
     $.ajax({
-        url : "<?php echo base_url('index.php/Person/ajax_edit/')?>/" + id,
+        url : "<?php echo base_url('index.php/C_CRUD/ajax_edit/')?>/" + id,
         type: "GET",
         dataType: "JSON",
         success: function(data)
@@ -283,7 +265,7 @@ function edit_person(id)
             $('[name="full_artikel"]').val(data.full_artikel);
             $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
             $('[name="tgl_artikel"]').datepicker('update',data.tgl_artikel);
-            $('.modal-title').text('Edit Person'); // Set title to Bootstrap modal title
+            $('.modal-title').text('Edit Artikel'); // Set title to Bootstrap modal title
  
         },
         error: function (jqXHR, textStatus, errorThrown)
@@ -305,9 +287,9 @@ function save()
     var url;
  
     if(save_method == 'add') {
-        url = "<?php echo base_url('index.php/Person/ajax_add')?>";
+        url = "<?php echo base_url('index.php/C_CRUD/ajax_add')?>";
     } else {
-        url = "<?php echo base_url('index.php/Person/ajax_update')?>";
+        url = "<?php echo base_url('index.php/C_CRUD/ajax_update')?>";
     }
  
     // ajax adding data to database
@@ -347,13 +329,13 @@ function save()
     });
 }
  
-function delete_person(id_artikel)
+function delete_artikel(id_artikel)
 {
     if(confirm('Are you sure delete this data?'))
     {
         // ajax delete data to database
         $.ajax({
-            url : "<?php echo base_url('index.php/Person/ajax_delete')?>/"+id,
+            url : "<?php echo base_url('index.php/C_CRUD/ajax_delete')?>/"+id,
             type: "POST",
             dataType: "JSON",
             success: function(data)
@@ -386,19 +368,20 @@ function delete_person(id_artikel)
                     <input type="hidden" value="" name="id_artikel"/> 
                     <div class="form-body">
                         <div class="form-group">
-                            <label class="control-label col-md-3">Judul Artikel</label>
+                            <label class="control-label col-md-4">Judul Artikel</label>
                             <div class="col-md-9">
                                 <input name="judul_artikel" placeholder="Judul" class="form-control" type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3">Konten Artikel</label>
+                            <label class="control-label col-md-4">Konten Artikel</label>
                             <div class="col-md-9">
                                 <input name="konten_artikel" placeholder="Konten" class="form-control" type="text">
                                 <span class="help-block"></span>
                             </div>
                         </div>
+                        
                         <!--<div class="form-group">
                             <label class="control-label col-md-3">Gender</label>
                             <div class="col-md-9">
@@ -411,7 +394,7 @@ function delete_person(id_artikel)
                             </div>
                         </div>-->
                         <div class="form-group">
-                            <label class="control-label col-md-3">Full Artikel</label>
+                            <label class="control-label col-md-4">Full Artikel</label>
                             <div class="col-md-9">
                                 <input name="full_artikel" placeholder="Full Artikel" class="form-control" type="text">
                                 <span class="help-block"></span>
@@ -439,7 +422,7 @@ function delete_person(id_artikel)
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright © Travel Bucket List 2018</span>
             </div>
           </div>
         </footer>

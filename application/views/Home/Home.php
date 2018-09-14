@@ -51,95 +51,22 @@ print_r ($artikel) ? -->
     <div class="container-fluid">
         <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <?php foreach($caro_artikel as $far){
+ ?>
                 <div class="carousel-item col-md-3  active">
                     <div class="panel panel-default">
                         <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/01-280x200.jpg')?>" alt="slide 1">
+                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/feat/'.$far['img_feat_name'])?>" alt="slide 1">
                             <div class="overlay">
-                                <h2>Bunaken</h2>
+                                <h2><?=$far['judul_feat']?></h2>
                                 <a class="info" href="<?php echo base_url().'index.php/Home/detail_article/1'?>">Link Here</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/02-280x200.jpg')?>" alt="slide 2">
-                            <div class="overlay">
-                                <h2>Gili Trawangan</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/03-280x200.jpg')?>" alt="slide 3">
-                            <div class="overlay">
-                                <h2>Gili Laba</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/04-280x200.jpg')?>" alt="slide 4">
-                            <div class="overlay">
-                                <h2>Pine Forest</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/05-280x200.jpg')?>" alt="slide 5">
-                            <div class="overlay">
-                                <h2>Mount Bromo</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/06-280x200.jpg')?>" alt="slide 6">
-                            <div class="overlay">
-                                <h2>Prambanan Temple</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3 ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/07-280x200.jpg')?>" alt="slide 7">
-                            <div class="overlay">
-                                <h2>Mount Rinjani</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-3  ">
-                    <div class="panel panel-default">
-                        <div class="panel-thumbnail hovereffect">
-                            <img class="img-fluid mx-auto d-block" src="<?php echo base_url('assets/img/280x200/08-280x200.jpg')?>" alt="slide 8">
-                            <div class="overlay">
-                                <h2>Madakaripura</h2>
-                                <a class="info" href="#">Link Here</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+  <?php }
+                ?>              
+                
             </div>
             <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -160,8 +87,8 @@ print_r ($artikel) ? -->
  ?>
                 <div class="col-lg-12 border-bottom">
                     <div class="bottom-border">
-                        <img src="<?php echo base_url('assets/img/750x350/'.$art['img_artikel_name'])?>" alt="Image" class="img-artikel-home col-md-12" style="width: 750px; height: 350px;">
-                        <a href="<?php echo base_url('index.php/Home/page_art/'.$art['id_artikel'])?>"><h3><?=$art['judul_artikel']?></h3></a>
+                        <a href="<?php echo base_url('index.php/Home/page_art/'.$art['id_artikel'])?>"><img src="<?php echo base_url('assets/img/750x350/'.$art['img_artikel_name'])?>" alt="Image" class="img-artikel-home col-md-12" style="width: 750px; height: 350px;"></a>
+                        <h3><?=$art['judul_artikel']?></h3>
                         <p class="text-justify">
                         <?=$art['konten_artikel']?>
                         </p>

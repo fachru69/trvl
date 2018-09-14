@@ -1,13 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class Person_model extends CI_Model {
+class M_CRUD extends CI_Model {
  
     var $table = 'artikel';
     var $column_order = array('judul_artikel','konten_artikel','full_artikel','tgl_artikel',null); //set column field database for datatable orderable
     var $column_search = array('judul_artikel','konten_artikel','full_artikel'); //set column field database for datatable searchable just firstname , lastname , address are searchable
     var $order = array('id_artikel' => 'desc'); // default order 
- 
     public function __construct()
     {
         parent::__construct();
@@ -101,6 +100,6 @@ class Person_model extends CI_Model {
         $this->db->where('id_artikel', $id);
         $this->db->delete($this->table);
     }
- 
+    
  
 }

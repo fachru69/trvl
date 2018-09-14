@@ -109,22 +109,18 @@
                 <h4 class="text-center">Popular Pieces</h4>
                 <p class="text-center">Your Favorite Destination Places</p>
                 <div class="col-sm-12 border-bottom">
-                    <img src="assets/img/280x200/01-280x200.jpg" alt="Image" class="col-md-12">
-                    <h5>Bunaken, Sulawesi Utara</h5>
-                    <p class="text-justify">Bunaken merupakan salah satu destinasi wista paling favorite bagi turis international, karena adanya wisata Snorkling</p>
+        <?php foreach($feat_artikel as $fa){
+ ?>
+                    <img src="<?php echo base_url('assets/img/feat/'.$fa['img_feat_name'])?>" alt="Image" class="col-md-12">
+                    <h5><?=$fa['judul_feat']?></h5>
+                    <p class="text-justify"><?=$fa['isi_feat']?></p>
                     <a href="#">
                         <i class="fa fa-comment" style="font-size: 16px"></i> 125 Comments
                     </a>
+                    <?php }
+ ?>
                 </div>
-                <div class="col-sm-12">
-                    <img src="assets/img/280x200/02-280x200.jpg" alt="Image" class="col-md-12">
-                    <h5>Bunaken, Sulawesi Utara</h5>
-                    <p class="text-justify">Bunaken merupakan salah satu destinasi wista paling favorite bagi turis international, karena adanya wisata Snorkling</p>
-                    <a href="#">
-                        <i class="fa fa-comment" style="font-size: 16px"></i> 125 Comments
-                    </a>
-                </div>
-                <div class="container">
+                <!--<div class="container">
                     <div id="demo" class="collapse">
                         <div class="col-sm-12 border-bottom">
                             <img src="assets/img/280x200/02-280x200.jpg" alt="Image" class="col-md-12">
@@ -146,7 +142,7 @@
                     <div class="wrapeer">
                         <button type="button" class="btn btn-info read-more" data-toggle="collapse" data-target="#demo">Read More</button>
                     </div>
-                </div>
+                </div>-->
 
             </div>
         </div>

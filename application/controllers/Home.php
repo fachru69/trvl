@@ -29,7 +29,10 @@ class Home extends CI_Controller {
     //memanggil full page artikel
     function page_art()
     {
-        
+        $id3=array(
+        'limit'=>4
+            );
+        $data ['feat_artikel'] = $this->Article_model->get_feat($id3);
         $filter = array(
             'id_artikel'=>$this->uri->segment(3)
         );
@@ -56,8 +59,11 @@ class Home extends CI_Controller {
         'limit'=>4
             );
         $data ['feat_artikel'] = $this->Article_model->get_feat($id3);
+        //carousel artikel
+        $id4=array(
+        'limit'=>8
+            );
+        $data ['caro_artikel'] = $this->Article_model->get_caro($id4);
         $this->load->view('Home/Home', $data);
-        
-        
     }
 }

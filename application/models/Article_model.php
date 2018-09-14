@@ -91,6 +91,32 @@ class Article_model extends CI_Model
         }
     }
     
+    //destinasi
+	public function get_caro($id4)
+   {
+        $this -> db -> select('*');
+        $this -> db -> from('feat_artikel');
+        $this -> db -> join('img_feat', 'feat_artikel.id_feat = img_feat.id_feat', 'left');
+		      //if($id!==null){
+		      //	$this -> db -> where('id_artikel',$id);
+		      //}
+		      $this -> db -> order_by('feat_artikel.id_feat','DESC');
+                if($id4['limit']!==null){
+                    $this -> db -> limit($id4['limit']);
+                    }
+		      $query = $this -> db -> get();
+        
+                // echo $this -> db -> get();
+        if ($query->num_rows () > 0)
+        {
+            $result = $query->result_array();
+            return $result;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
     
     

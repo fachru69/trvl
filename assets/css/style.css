@@ -42,6 +42,19 @@ body {
     background-size: cover;
     background: url(../img/topbg_02.jpg) no-repeat center center fixed;
 }
+.blur{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url(../img/photographer-at-sunset-silhouette.jpg) no-repeat center center fixed;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+
+}
 
 /* Carousel */
 @media (min-width: 768px) {
