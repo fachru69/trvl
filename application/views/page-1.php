@@ -25,11 +25,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto mr-auto">
-                         <a class="nav-link" href="<?php echo base_url('index.php/Home')?>">Home</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Home')?>">Home</a>
                         <a class="nav-link" href="<?php echo base_url('index.php/Beautiful')?>">Beautiful Indonesia</a>
                         <a class="nav-link" href="<?php echo base_url('index.php/Marvel')?>">Indonesia Marvel</a>
                         <a class="nav-link" href="<?php echo base_url('index.php/About')?>">About Me</a>
-                        <a class="nav-link" href="<?php echo base_url('index.php/Admin')?>">Admin</a>
+                        <a class="nav-link" href="<?php echo base_url('index.php/Login')?>">+ Article</a>
                     </ul>
                 </div>
             </div>

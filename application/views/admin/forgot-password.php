@@ -45,7 +45,7 @@
             <a class="btn btn-primary btn-block" href="<?php echo base_url()?>index.php/Login">Reset Password</a>
           </form>
           <div class="text-center">
-            <a class="d-block small mt-3" href="register.html">Register an Account</a>
+            <a class="d-block small mt-3" href="<?php echo base_url()?>index.php/Login/register">Register an Account</a>
             <a class="d-block small" href="<?php echo base_url()?>index.php/Login">Login Page</a>
           </div>
         </div>

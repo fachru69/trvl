@@ -30,7 +30,6 @@ class Home extends CI_Controller {
     function page_art()
     {
         
-        echo $this->uri->segment(3);
         $filter = array(
             'id_artikel'=>$this->uri->segment(3)
         );
