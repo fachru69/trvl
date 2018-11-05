@@ -40,8 +40,6 @@ class Home extends CI_Controller {
         
         $this->load->view('page-1', $data);
     }
-    
-    
 	public function index()
 	{
         //artikel home
@@ -65,5 +63,6 @@ class Home extends CI_Controller {
             );
         $data ['caro_artikel'] = $this->Article_model->get_caro($id4);
         $this->load->view('Home/Home', $data);
+        
     }
 }
