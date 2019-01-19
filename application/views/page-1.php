@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
     <script src="<?php echo base_url('assets/js/style.js')?>"></script>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=1910649445722741&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </head>
 
 <body>
@@ -58,50 +66,8 @@
                     <div class="well">
  
     <h4>Leave a comment</h4>
- 
-    <form role="form" class="clearfix">
- 
-        <div class="col-md-6 form-group">
-            <label class="sr-only" for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name">
-        </div>
- 
-        <div class="col-md-6 form-group">
-            <label class="sr-only" for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
-        </div>
- 
-        <div class="col-md-12 form-group">
-            <label class="sr-only" for="email">Comment</label>
-            <textarea class="form-control" id="comment" placeholder="Comment"></textarea>
-        </div>
- 
-        <div class="col-md-12 form-group text-right">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
- 
-    </form>
-    <ul id="comments" class="comments">
-    <li class="comment">
-        <div class="clearfix">
-            <h4 class="pull-left">John</h4>
-            <p class="pull-right">9:41 PM on August 24, 2013</p>
-        </div>
-        <p>
-            <em>I don't believe in astrology but still your writing style is really great!</em>
-        </p>
-    </li>
- 
-    <li class="comment clearfix">
-        <div class="clearfix">
-            <h4 class="pull-left">John</h4>
-            <p class="pull-right">9:41 PM on August 24, 2013</p>
-        </div>
-        <p>
-            <em>I don't believe in astrology but still your writing style is really great!</em>
-        </p>
-    </li>
-</ul>
+ <?php $uri = $_SERVER['index_page'] . $_SERVER['REQUEST_URI']; ?>
+   <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
 </div>
                 </div>
             </div>
@@ -120,29 +86,6 @@
                     <?php }
  ?>
                 </div>
-                <!--<div class="container">
-                    <div id="demo" class="collapse">
-                        <div class="col-sm-12 border-bottom">
-                            <img src="assets/img/280x200/02-280x200.jpg" alt="Image" class="col-md-12">
-                            <h5>Bunaken, Sulawesi Utara</h5>
-                            <p class="text-justify">Bunaken merupakan salah satu destinasi wista paling favorite bagi turis international, karena adanya wisata Snorkling</p>
-                            <a href="#">
-                                <i class="fa fa-comment" style="font-size: 16px"></i> 125 Comments
-                            </a>
-                        </div>
-                        <div class="col-sm-12">
-                            <img src="assets/img/280x200/02-280x200.jpg" alt="Image" class="col-md-12">
-                            <h5>Bunaken, Sulawesi Utara</h5>
-                            <p class="text-justify">Bunaken merupakan salah satu destinasi wista paling favorite bagi turis international, karena adanya wisata Snorkling</p>
-                            <a href="#">
-                                <i class="fa fa-comment" style="font-size: 16px"></i> 125 Comments
-                            </a>
-                        </div>
-                    </div>
-                    <div class="wrapeer">
-                        <button type="button" class="btn btn-info read-more" data-toggle="collapse" data-target="#demo">Read More</button>
-                    </div>
-                </div>-->
 
             </div>
         </div>
