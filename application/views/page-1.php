@@ -66,7 +66,7 @@
                     <div class="well">
  
     <h4>Leave a comment</h4>
- <?php $uri = $_SERVER['index_page'] . $_SERVER['REQUEST_URI']; ?>
+ 
    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
 </div>
                 </div>
