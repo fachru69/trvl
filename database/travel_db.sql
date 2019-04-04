@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2019 at 05:07 AM
+-- Generation Time: Apr 04, 2019 at 03:44 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -63,10 +63,9 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `judul_artikel`, `konten_artikel`, `full_artikel`, `tgl_artikel`, `id_img`) VALUES
-(1, 'Gunung Rinjani', 'Gunung Rinjani merupakan gunung yang berada di Nusa Tenggara', 'Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat. Gunung yang merupakan gunung berapi kedua tertinggi di Indonesia dengan ketinggian 3.726 m dpl serta terletak pada lintang 8º25\' LS dan 116º28\' BT ini merupakan gunung favorit bagi pendaki Indonesia karena keindahan pemandangannya. Gunung ini merupakan bagian dari Taman Nasional Gunung Rinjani yang memiliki luas sekitar 41.330 ha dan ini akan diusulkan penambahannya sehingga menjadi 76.000 ha ke arah barat dan timur.', '2018-10-05', ''),
-(2, 'Gili Trawangan', 'Gili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat di sebelah barat laut Lombok.', 'Pantai Gili Trawangan\r\nGili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat di sebelah barat laut Lombok. Trawangan juga satu-satunya gili yang ketinggiannya di atas permukaan laut cukup signifikan. Dengan panjang 3 km dan lebar 2 km, Trawangan berpopulasi sekitar 800 jiwa. Di antara ketiga gili tersebut, Trawangan memiliki fasilitas untuk wisatawan yang paling beragam; kedai \"Tîr na Nôg\" mengklaim bahwa Trawangan adalah pulau terkecil di dunia yang ada bar Irlandia-nya. Bagian paling padat penduduk adalah sebelah timur pulau ini.', '2018-10-05', ''),
-(3, 'Lembah Balieum', 'Lembah Baliem merupakan lembah di pegunungan Jayawijaya', 'Lembah ini dikenal juga sebagai grand baliem valley merupakan tempat tinggal suku Dani yang terletak di Desa Wosilimo, 27 km dari Wamena, Papua. Selain Suku Dani beberapa suku lainnya hidup bertetangga di lembah ini yakni Suku Yali dan suku Lani.', '2018-10-05', ''),
-(4, 'SIdang', 'asdadad', 'alskjdalsjdl', '2019-02-05', '');
+(1, 'Gunung Rinjani', 'Gunung Rinjani merupakan gunung yang berada di Nusa Tenggara', 'Gunung Rinjani adalah gunung yang berlokasi di Pulau Lombok, Nusa Tenggara Barat. Gunung yang merupakan gunung berapi kedua tertinggi di Indonesia dengan ketinggian 3.726 m dpl serta terletak pada lintang 8º25\' LS dan 116º28\' BT ini merupakan gunung favorit bagi pendaki Indonesia karena keindahan pemandangannya. Gunung ini merupakan bagian dari Taman Nasional Gunung Rinjani yang memiliki luas sekitar 41.330 ha dan ini akan diusulkan penambahannya sehingga menjadi 76.000 ha ke arah barat dan timur.', '2018-10-05', '1'),
+(2, 'Gili Trawangan', 'Gili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat di sebelah barat laut Lombok.', 'Pantai Gili Trawangan\r\nGili Trawangan adalah yang terbesar dari ketiga pulau kecil atau gili yang terdapat di sebelah barat laut Lombok. Trawangan juga satu-satunya gili yang ketinggiannya di atas permukaan laut cukup signifikan. Dengan panjang 3 km dan lebar 2 km, Trawangan berpopulasi sekitar 800 jiwa. Di antara ketiga gili tersebut, Trawangan memiliki fasilitas untuk wisatawan yang paling beragam; kedai \"Tîr na Nôg\" mengklaim bahwa Trawangan adalah pulau terkecil di dunia yang ada bar Irlandia-nya. Bagian paling padat penduduk adalah sebelah timur pulau ini.', '2018-10-05', '2'),
+(3, 'Lembah Balieum', 'Lembah Baliem merupakan lembah di pegunungan Jayawijaya', 'Lembah ini dikenal juga sebagai grand baliem valley merupakan tempat tinggal suku Dani yang terletak di Desa Wosilimo, 27 km dari Wamena, Papua. Selain Suku Dani beberapa suku lainnya hidup bertetangga di lembah ini yakni Suku Yali dan suku Lani.', '2018-10-05', '');
 
 -- --------------------------------------------------------
 
@@ -113,6 +112,26 @@ INSERT INTO `feat_artikel` (`id_feat`, `judul_feat`, `isi_feat`, `tgl_feat`) VAL
 (2, 'Candi Prambanan', 'Candi Prambanan atau Candi Roro Jonggrang adalah kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9 masehi.', '2018-10-05'),
 (3, 'Kampung Naga', 'Kampung Naga terletak di Tasikmalaya, Jawa Barat, merupakan suatu perkampungan yang dihuni oleh sekelompok.....', '2019-02-01'),
 (4, 'Grand Canyon', 'Cukang Taneuh atau Green Canyon adalah salah satu objek wisata di Jawa Barat yang terletak di Desa Kertayasa....', '2019-02-01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `img_article`
+--
+
+CREATE TABLE `img_article` (
+  `id_img` int(10) NOT NULL,
+  `id_article` int(11) NOT NULL,
+  `img_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `img_article`
+--
+
+INSERT INTO `img_article` (`id_img`, `id_article`, `img_name`) VALUES
+(1, 1, '01-750x350.jpg'),
+(2, 2, '02-750x350.jpg');
 
 -- --------------------------------------------------------
 
@@ -239,6 +258,12 @@ ALTER TABLE `feat_artikel`
   ADD PRIMARY KEY (`id_feat`);
 
 --
+-- Indexes for table `img_article`
+--
+ALTER TABLE `img_article`
+  ADD PRIMARY KEY (`id_img`);
+
+--
 -- Indexes for table `img_artikel`
 --
 ALTER TABLE `img_artikel`
@@ -276,7 +301,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_artikel` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `destinasi`
@@ -289,6 +314,12 @@ ALTER TABLE `destinasi`
 --
 ALTER TABLE `feat_artikel`
   MODIFY `id_feat` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `img_article`
+--
+ALTER TABLE `img_article`
+  MODIFY `id_img` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `img_artikel`
