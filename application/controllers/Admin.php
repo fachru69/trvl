@@ -16,7 +16,10 @@ class Admin extends CI_Controller{
     function charts(){
         $this->load->view('admin/charts');
     }
-    function tables(){
-        $this->load->view('admin/tables');
+    function article(){
+        $this->load->view('admin/article');
+    }
+    function view(){
+        $this->load->view('admin/view');
     }
 }

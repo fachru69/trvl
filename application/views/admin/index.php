@@ -120,10 +120,15 @@
             <span>Charts</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/tables">
+          <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/article">
             <i class="fas fa-fw fa-table"></i>
             <span>Artikel</span></a>
         </li>
+          <li class="nav-item active">
+                <a class="nav-link" href="<?php echo base_url()?>index.php/Admin/view">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Gambar</span></a>
+            </li>
       </ul>
 
       <div id="content-wrapper">
